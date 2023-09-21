@@ -30,7 +30,13 @@ package com.dicoding.exam.latihanopsional4
  */
 
 fun getMiddleCharacters(string: String): String {
-    return ""
+    val length = string.length
+
+    if (length % 2 == 0) {
+        return string.substring((length / 2) - 1, (length / 2) + 1)
+    }
+
+    return string.substring((length / 2), (length / 2) + 1)
 }
 
 fun main() {
