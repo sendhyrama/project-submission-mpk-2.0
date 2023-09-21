@@ -38,5 +38,5 @@ fun main() {
  */
 
 fun concatString(string1: String, string2: String): String {
-    return ""
+    return string1.plus(string2)
 }
