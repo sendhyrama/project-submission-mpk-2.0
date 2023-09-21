@@ -28,7 +28,11 @@ package com.dicoding.exam.latihanopsional1
  */
 
 fun sumOfBigThree(vararg numbers: Int): Int {
-    return 0
+    val sortedNumber = numbers.sortedDescending()
+    val threeBiggestNumber = sortedNumber.take(3)
+    val sum = threeBiggestNumber.sum()
+
+    return sum
 }
 
 fun main() {
