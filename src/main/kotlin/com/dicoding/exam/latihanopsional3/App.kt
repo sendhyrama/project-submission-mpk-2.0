@@ -30,7 +30,12 @@ package com.dicoding.exam.latihanopsional3
  */
 
 fun manipulateString(str: String, int: Int): String {
-    return ""
+    val regex = Regex("\\d+")
+    val matchResult = regex.find(str)
+
+    return (matchResult?.value?.toIntOrNull() ?: 0).let {
+        if (it > 0) "$str${it * int}" else "$str$int"
+    }
 }
 
 fun main() {
